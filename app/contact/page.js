@@ -120,10 +120,6 @@ const Page = () => {
           <br />
           Robertson | 6705
         </p>
-        <p className=" text-secondary/70 ">
-          GPS Coordinates:
-          <br /> 33°48'30.1"S 19°51'24.6"E
-        </p>
       </div>
     </main>
   );
