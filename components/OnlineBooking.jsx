@@ -30,23 +30,35 @@ const OnlineBooking = () => {
 
   const SelectedDate = bookingDetails.date ? bookingDetails.date : null;
 
-  const showToast = () => {
-    toast({
-      title: "Success.",
-      description: "Booking created.",
+  const restdetails = () => {
+    setBookingdetails({
+      name: "",
+      cel: "",
+      email: "",
+      date: "",
+      bookingTime: "",
+      numPlayers: "",
+      holes: "",
     });
   };
 
-  const handleTest = () => {
-    console.log("Test");
+  const showToast = (title, message) => {
+    toast({
+      title: title,
+      description: message,
+    });
+  };
+
+  const uploadDetails = () => {
     axios
       .post("/api", bookingDetails)
       .then(function (res) {
-        console.log(res.status);
-        // showToast();
+        restdetails();
+        showToast("Success.", "Booking successfull created.");
       })
       .catch(function (e) {
         console.log(e);
+        showToast("Errpr.", "Failed to save Booking. Please Try agian.");
       });
   };
 
@@ -185,7 +197,7 @@ const OnlineBooking = () => {
             </span>
           </p>
           <Button
-            onClick={handleTest}
+            onClick={uploadDetails}
             className=" bg-primary text-secondary border-none rounded-[50px] hover:bg-[#d2d7dacd] ">
             BOOK NOW
           </Button>

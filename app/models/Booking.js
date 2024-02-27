@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const BookingSchema = new mongoose.Schema({
+const Booking = new mongoose.Schema({
   name: String,
   cel: Number,
   email: String,
@@ -10,5 +10,4 @@ const BookingSchema = new mongoose.Schema({
   holes: Number,
 });
 
-module.exports =
-  mongoose.models.Booking ?? mongoose.model("Booking", BookingSchema);
+module.exports = mongoose.models.Booking ?? mongoose.model("Booking", Booking);
