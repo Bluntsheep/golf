@@ -1,112 +1,120 @@
+import AccommodationBlocks from "@/components/ui/accommodationBlocks";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+  const venues = [
+    { lable: "The Estate", bgImage: "/estate.jpeg" },
+    { lable: "Golf & Clubhouse", bgImage: "/golf.jpeg" },
+    { lable: "Property", bgImage: "/property.jpeg" },
+    { lable: "Accommodation", bgImage: "/accommodation.jpeg" },
+  ];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <div className=" container bg-[url('/golfBackground.jpeg')] bg-cover w-screen h-[75dvh] flex items-end">
+        <div className=" mb-20 ml-3 md:ml-20">
+          <h1 className=" text-3xl md:text-5xl font-light text-white mb-9">
+            Silwerstrand Golf & River Estate
+          </h1>
+          <p className=" text-xs md:text-base text-white">
+            ROBERTSON | WESTERN CAPE | SOUTH AFRICA
+          </p>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className=" container">
+        <div className=" flex flex-col container pt-2 px-32 text-sm text-center items-center">
+          <Image
+            className=" p-10"
+            width={300}
+            height={300}
+            src={"/logo.png"}
+            alt="Silwerstrand Logo"
+          />
+          <p>
+            The Silwerstrand Golf and River Estate is located in the Robertson
+            district, just outside the country town of Robertson on the way
+            to/from Worcester. The Estate is home to the Robertson Golf Club,
+            custodian of the 18-hole Silwerstrand golf course. The Estate is
+            divided into three parts, the Golf Estate, situated on and around
+            the golf course, the Village Estate and the Hillside/Riverside
+            Estate, both of which are flanked by the Breede River, The Estate
+            comprises of 401 ervens of which approximately 336 have been sold. A
+            number of homes are in various state of completion - from completed
+            and occupied to foundations being dug.
+          </p>
+        </div>
+        <hr className=" m-10 border-[1px] border-solid border-b-slate-400 " />
+        <div className=" container flex flex-col text-center items-center">
+          <p>BOOK YOUR TEE TIME IN ADVANCE</p>
+          <Link href={"/golfing/#booking"}>
+            <Button className=" rounded-3xl max-w-[200px] my-5">
+              BOOK YOUR TEE ONLINE
+            </Button>
+          </Link>
+          <p>
+            For Tee Times Reservations
+            <br /> Tel: 023 626 1090
+            <br /> Email: proshop@silwerstrand.co.za
+          </p>
+        </div>
+        <hr className=" m-10 border-[1px] border-solid border-b-slate-400 " />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className=" sm:flex mb-5 px-5">
+        {venues.map((venue) => (
+          <AccommodationBlocks
+            key={venue.lable}
+            lable={venue.lable}
+            bgImage={venue.bgImage}
+          />
+        ))}
+      </div>
+      <div className=" container mb-3">
+        <div className=" h-[60vh] container bg-[url(/golfcourse.jpeg)] bg-cover bg-bottom">
+          <div className=" h-[100%] w-[100%] md:w-[40%] bg-black/70 flex items-center p-5">
+            <div className=" container pl-5 bottom">
+              <p className=" text-white text-3xl mb-4">Golf Course News</p>
+              <p className=" text-white ">
+                Greens: The greens are currently in a good playable condition
+                with an average roll speed of nine on the stimp meter. All
+                greens re-ceived the following:
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" container mb-3">
+        <div className=" h-[60vh] container bg-[url(/comp.jpeg)] bg-cover bg-bottom ">
+          <div className=" h-[100%] w-[100%] md:w-[40%] bg-black/70 flex items-center p-5">
+            <div className=" container pl-5 bottom">
+              <p className=" text-white text-3xl mb-4">
+                Competitions and club activities
+              </p>
+              <p className=" text-white ">
+                Upcoming Golf day’s 2021 30 January 2021: Jacquin Hess
+                Invitational 06 March 2021: Robertson Ladies Open 12 & 13 March
+                2021:
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" container mb-3">
+        <div className=" h-[60vh] container bg-[url(/rest.jpeg)] bg-cover bg-bottom">
+          <div className=" h-[100%] w-[100%] md:w-[40%] bg-black/70 flex items-center p-5">
+            <div className=" container pl-5 bottom">
+              <p className=" text-white text-3xl mb-4">
+                Restaurant News & Specials
+              </p>
+              <p className=" text-white ">
+                Greens: The greens are currently in a good playable condition
+                with an average roll speed of nine on the stimp meter. All
+                greens re-ceived the following:
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );
