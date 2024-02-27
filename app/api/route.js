@@ -1,6 +1,6 @@
 import React from "react";
 import mongoose from "mongoose";
-import Booking from "../models/booking";
+import Booking from "../models/Booking";
 import { NextRequest, NextResponse } from "next/server";
 const password = process.env.MONGO_PASSWORD;
 
