@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className=" container bg-[url('/golfBackground.jpeg')] bg-cover w-screen h-[75dvh] flex items-end">
+      <div className=" container bg-[url('/golfbackground.jpeg')] bg-cover w-screen h-[75dvh] flex items-end">
         <div className=" mb-20 ml-3 md:ml-20">
           <h1 className=" text-3xl md:text-5xl font-light text-white mb-9">
             Silwerstrand Golf & River Estate

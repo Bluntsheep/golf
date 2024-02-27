@@ -20,7 +20,7 @@ const AppBar = () => {
         <Image
           height={70}
           width={70}
-          src={"/logo.svg"}
+          src={"/Logo.svg"}
           alt="SilverStrand logo"
         />
       </div>
