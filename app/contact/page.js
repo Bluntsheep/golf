@@ -1,16 +1,10 @@
 "use client";
-import CustomInputButton from "@/components/CustomInputButton";
 import CustomInputButtonWhite from "@/components/CustomInputButtonWhite";
-import { CustomSelect } from "@/components/CustomSelect";
 import CustomSelectWhite from "@/components/CustomSelectWhite";
 import { Button } from "@/components/ui/button";
 import React from "react";
 
 const Page = () => {
-  const handleUpdate = () => {
-    console.log("123");
-  };
-
   const listDetails = ["Silwerstrand Estate", "Robertson Golf Club"];
 
   const contactDetails = [
